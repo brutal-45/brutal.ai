@@ -99,7 +99,7 @@
         // 👉👉👉 PASTE YOUR KEY EXACTLY HERE BETWEEN THE QUOTES 👈👈👈
         const MY_API_KEY = "b4ff1551b6msh3b8aee841a164c1p196fe2jsnf2a1eb259445"; 
         
-        const API_HOST = "netflix-movies-and-tv-shows-api-by-apirobots.p.rapidapi.com";
+        const API_HOST = "streaming-availability.p.rapidapi.com";
 
         // ==========================================
         // 2. FETCHING
@@ -109,8 +109,8 @@
             const options = {
                 method: 'GET',
                 headers: {
-                    'x-rapidapi-key': MY_API_KEY,
-                    'x-rapidapi-host': API_HOST
+                    'x-rapidapi-key': b4ff1551b6msh3b8aee841a164c1p196fe2jsnf2a1eb259445,
+                    'x-rapidapi-host': streaming-availability.p.rapidapi.com
                 }
             };
 
@@ -208,7 +208,7 @@
         // ==========================================
 
         async function init() {
-            if (MY_API_KEY === "PASTE_YOUR_KEY_HERE") {
+            if (MY_API_KEY === "YOUR_API_KEY") {
                 showError("You forgot to paste your API Key in the code! Open the HTML file and edit line 267.");
                 return;
             }
