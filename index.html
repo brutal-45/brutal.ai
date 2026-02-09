@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>BRUTALTOOLS - Ultimate PDF App</title>
     
-    <!-- PWA / FAVICON ICON (Using your design) -->
-    <!-- Note: In a real compiled app, this would be a .png file. Here we use the HTML directly. -->
-    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4aWR0aD0iMTIwMCIgaGVpZ2h0IjEwIiB2llZ2h0IjEwIiBmaWxsPSJub25zZXJvIjoxLjAiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub256ZXJvIjEuMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0ibm9uZXJvIjEuMCIgcng9IjU1YzU4ZThmNzEzIiBmaWxsPSJub256ZXJvIjEuMCI+PHR4eHQgeD0iNTAiIHk9IjUwIiBmb250LWZhbWlseT0JhcGh1ciBmb250LXdlaWdodD03MDAiIGZvbnRzdHlsZT0iMTAwIiBmaWxsPSJub256ZXJvIjEuMCIgZmlsbD0ibm9uZXJvIjEuMCIgY3g9IjcwIiBjeT0iNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCI+PC9UZXh0Pjwvc3ZnPg==">
+    <!-- PWA / FAVICON ICON -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4aWQ9IkJyZXRyb29sSWNvbiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxyZWN0IHg9IjMiIHk9IjMiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgcng9IjIiIHJ5PSIyIiBmaWxsPSIjNmEwZGFkIiBzdHJva2U9Im5vbmUiPjwvcmVjdD48dGV4dCB4PSIxMiIgeT0iMTYiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1zaXplPSIxMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlBERjwvdGV4dD48L3N2Zz4=">
     
     <!-- Embedded PWA Manifest -->
-    <link rel="manifest" href='data:application/manifest+json;base64,ewogICJuYW1lIjogIkJSVVRBTFRPT0xTIiwKICAic2hvcnRfbmFtZSI6ICJCcnV0YWxUb29scyIsCiAgInN0YXJ0X3VybCI6ICIuIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZjlmYWZiIiwKICAidGhlbWVfY29xvciI6ICIjNkEwREFEIiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiaHR0cHM6Ly9waWNzdW0ucGhvdG9zL3NlZWQvYnJ1dGFsdG9vbHMvMTkyLzE5MiIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvanBnIgogICAgfQogIF0KfQ=='>
+    <link rel="manifest" href='data:application/manifest+json;base64,ewogICJuYW1lIjogIkJSVVRBTFRPT0xTIiwKICAic2hvcnRfbmFtZSI6ICJCcnV0YWxUb29scyIsCiAgInN0YXJ0X3VybCI6ICIuIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjMWUxYjJlIiwKICAidGhlbWVfY29xvciI6ICIjNmEwZGFkIiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiaHR0cHM6Ly9waWNzdW0ucGhvdG9zL3NlZWQvYnJ1dGFsdG9vbHMvMTkyLzE5MiIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvanBnIgogICAgfQogIF0KfQ=='>
     
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -47,12 +46,13 @@
             flex-direction: column;
         }
 
-        /* --- CUSTOM ICON STYLING (Adapted from your code) --- */
+        /* --- CUSTOM ICON STYLING --- */
         .brand-container {
             display: flex;
             align-items: center;
             justify-content: center;
             transition: transform 0.2s;
+            cursor: pointer;
         }
 
         /* Small version for Header */
@@ -289,7 +289,7 @@
     <!-- Header -->
     <header class="app-header">
         <div class="brand-container" onclick="showLanding()">
-            <!-- SMALL ICON (Your Design) -->
+            <!-- SMALL ICON -->
             <div class="brand-icon brand-icon-sm">
                 <div class="icon-box">
                     <span class="icon-text">PDF</span>
@@ -317,7 +317,7 @@
             <!-- LANDING PAGE (Website View) -->
             <div id="landingPage" class="hero-section">
                 
-                <!-- LARGE ICON (Your Design) -->
+                <!-- LARGE ICON -->
                 <div class="brand-icon brand-icon-lg">
                   <div class="icon-box">
                     <span class="icon-text">PDF</span>
@@ -346,9 +346,10 @@
                         <div class="os-title"><i class="fa-brands fa-linux"></i> Linux</div>
                         <button class="dl-btn"><i class="fa-solid fa-download"></i> Download</button>
                     </div>
-                    <div class="dl-card" onclick="downloadApp()">
+                    <!-- ANDROID SLOT MODIFIED -->
+                    <div class="dl-card" onclick="downloadAndroid()">
                         <div class="os-title"><i class="fa-brands fa-android"></i> Android</div>
-                        <button class="dl-btn"><i class="fa-solid fa-download"></i> Download</button>
+                        <button class="dl-btn"><i class="fa-solid fa-download"></i> Download .APK</button>
                     </div>
                 </div>
             </div>
@@ -414,8 +415,8 @@
             files = [];
         }
 
+        // Downloads the HTML file itself (for Desktop usage)
         function downloadApp() {
-            // Downloads itself
             const htmlContent = document.documentElement.outerHTML;
             const blob = new Blob([htmlContent], { type: 'text/html' });
             const url = URL.createObjectURL(blob);
@@ -430,6 +431,20 @@
             URL.revokeObjectURL(url);
             
             alert("App downloaded!\n\n1. Open the downloaded .html file.\n2. BRUTALTOOLS will launch as a Native App with YOUR ICON.");
+        }
+
+        // Downloads the specific APK file (For Android)
+        function downloadAndroid() {
+            // IMPORTANT: REPLACE THE URL BELOW WITH YOUR ACTUAL APK FILE LINK
+            // It can be a relative path (e.g., 'app-release.apk') or a full URL (e.g., 'https://site.com/app.apk')
+            const apkUrl = 'https://mega.nz/file/bswkUTqC#IxEPcVO_fhGrXKaVli5NDTkxvR24iIMCzt6WZGWo4dY'; 
+            
+            const a = document.createElement('a');
+            a.href = apkUrl;
+            a.download = 'BRUTALTOOLS.apk';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         }
 
         // --- APP LOGIC ---
